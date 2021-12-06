@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+{% block title %} {{snack.name}} {% endblock %}
+
+{% block content %}
+<h1>{{snack.name}}</h1>
+<h2>{{snack.purchaser}}</h2>
+<h3>{{snack.description}}</h3>
+
+
+<h1>Snacks</h1>
+    <ol>
+        {% for thing in object_list %}
+        <li><h1>{{thing.name}}</h1>
+            <h2>{{thing.purchaser}}</h2>
+            <p>{{thing.description}}</p>
+        </li>
+        {% endfor %}
+
+    </ol>
+
+
+
+{% endblock %}
